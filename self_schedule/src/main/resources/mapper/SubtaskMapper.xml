@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cjl.self_schedule.subtask.mapper.SubtaskMapper">
+    
+    <select id="findByTaskId" resultType="com.cjl.self_schedule.subtask.entity.Subtask">
+        SELECT * FROM subtask 
+        WHERE task_id = #{taskId} 
+        ORDER BY sort_order ASC, created_time ASC
+    </select>
+    
+    <select id="countByTaskId" resultType="int">
+        SELECT COUNT(*) FROM subtask WHERE task_id = #{taskId}
+    </select>
+    
+    <select id="countCompletedByTaskId" resultType="int">
+        SELECT COUNT(*) FROM subtask WHERE task_id = #{taskId} AND status = 2
+    </select>
+    
+</mapper>

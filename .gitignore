@@ -1,0 +1,49 @@
+# 依赖
+node_modules/
+target/
+.mvn/
+
+# 环境变量和密钥
+.env
+.env.*
+!.env.example
+
+# 构建产物
+dist/
+dev-dist/
+*.jar
+*.war
+
+# 日志
+*.log
+logs/
+log.txt
+ai_logs/
+startup_log*.txt
+startup_output*.txt
+spring_boot_output*.log
+
+# 上传文件
+uploads/
+avatars/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+*.swp
+*.swo
+
+# 系统文件
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 测试和调试脚本
+screenshots/*.js
+test-*.py
+fix_*.js
+
+# 数据库备份
+*.sql.gz
+backups/

@@ -1,0 +1,1 @@
+.loading-container[data-v-a99d6859]{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 20px}.loading-icon[data-v-a99d6859]{animation:spin-a99d6859 1s linear infinite;color:var(--primary)}.loading-text[data-v-a99d6859]{color:#9ca3af;margin-top:12px;font-size:14px}@keyframes spin-a99d6859{0%{transform:rotate(0)}to{transform:rotate(360deg)}}

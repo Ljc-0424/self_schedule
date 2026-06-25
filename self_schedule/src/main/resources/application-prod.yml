@@ -1,0 +1,87 @@
+server:
+  port: 8080
+  tomcat:
+    uri-encoding: UTF-8
+    max-threads: 100
+    min-spare-threads: 5
+  shutdown: graceful
+
+spring:
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    hikari:
+      minimum-idle: 3
+      maximum-pool-size: 8
+      idle-timeout: 300000
+      connection-timeout: 20000
+      max-lifetime: 1800000
+      leak-detection-threshold: 60000
+      pool-name: SelfScheduleHikariCP
+
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+      password: ${REDIS_PASSWORD:}
+      timeout: 5000ms
+      lettuce:
+        pool:
+          max-active: 4
+          max-idle: 4
+          min-idle: 1
+          max-wait: 5000ms
+
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 5MB
+
+  mail:
+    host: ${MAIL_HOST}
+    port: ${MAIL_PORT:465}
+    username: ${MAIL_USERNAME}
+    password: ${MAIL_PASSWORD}
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.nologging.NoLoggingImpl
+  global-config:
+    banner: false
+
+ai:
+  log-enabled: false
+
+jwt:
+  secret-key: ${JWT_SECRET_KEY}
+  expiration-time: ${JWT_EXPIRATION_TIME:86400000}
+
+encryption:
+  secret-key: ${AES_SECRET_KEY}
+
+app:
+  cleanup:
+    enabled: true
+
+debug: false
+
+logging:
+  level:
+    root: WARN
+    com.cjl.self_schedule: INFO
+    com.cjl.self_schedule.ai.service.impl: WARN
+    com.cjl.self_schedule.common.filter: WARN
+    com.cjl.self_schedule.common.interceptor: WARN
+    org.springframework.web: WARN
+    org.springframework.data.redis: WARN
+  file:
+    name: logs/self_schedule.log
+  logback:
+    rollingpolicy:
+      max-file-size: 10MB
+      max-history: 7
+      total-size-cap: 100MB
+  charset:
+    console: UTF-8
+    file: UTF-8

@@ -1,0 +1,31 @@
+[Unit]
+Description=自律日程 Self Schedule Application
+After=network.target mysql.service redis-server.service
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/self-schedule
+ExecStart=/usr/bin/java -jar /opt/self-schedule/self_schedule-0.0.1-SNAPSHOT.jar \
+  --spring.datasource.url=jdbc:mysql://127.0.0.1:3306/self_schedule?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true \
+  --spring.datasource.username=${DB_USERNAME} \
+  --spring.datasource.password=${DB_PASSWORD} \
+  --spring.data.redis.host=127.0.0.1 \
+  --spring.data.redis.port=6379 \
+  --jwt.secret-key=${JWT_SECRET_KEY} \
+  --encryption.secret-key=${AES_SECRET_KEY} \
+  --spring.mail.host=smtp.qq.com \
+  --spring.mail.port=465 \
+  --spring.mail.username=${MAIL_USERNAME} \
+  --spring.mail.password=${MAIL_PASSWORD} \
+  --cors.allowed-origins=https://your-domain.com \
+  --debug=false \
+  --logging.level.root=WARN \
+  --logging.level.com.cjl.self_schedule=INFO
+Restart=on-failure
+RestartSec=15
+StandardOutput=append:/var/log/self-schedule/app.log
+StandardError=append:/var/log/self-schedule/app.log
+
+[Install]
+WantedBy=multi-user.target
