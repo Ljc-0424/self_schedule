@@ -124,13 +124,21 @@ scp target/self_schedule-0.0.1-SNAPSHOT.jar root@your-server:/opt/self-schedule/
 
 ## 截图
 
-| 登录页 | 首页 Dashboard |
+| 登录页 | 注册页 |
 |:---:|:---:|
-| ![登录](screenshots/redesign-01-login.png) | ![首页](screenshots/final-home.png) |
+| ![登录](screenshots/github/01-login.png) | ![注册](screenshots/github/02-register.png) |
 
-| 任务管理 | 专注计时 |
+| 首页 Dashboard | 任务管理 |
 |:---:|:---:|
-| ![任务](screenshots/final-tasks.png) | ![专注](screenshots/final-focus.png) |
+| ![首页](screenshots/github/03-home.png) | ![任务](screenshots/github/04-tasks.png) |
+
+| 专注计时 | 用户中心 |
+|:---:|:---:|
+| ![专注](screenshots/github/05-focus.png) | ![用户](screenshots/github/09-user.png) |
+
+| 提醒管理 | 消息中心 |
+|:---:|:---:|
+| ![提醒](screenshots/github/06-reminders.png) | ![消息](screenshots/github/07-messages.png) |
 
 ## License
 
