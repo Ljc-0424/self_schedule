@@ -149,21 +149,35 @@ scp target/self_schedule-0.0.1-SNAPSHOT.jar root@your-server:/opt/self-schedule/
 
 ## 截图
 
+### 认证页面
 | 登录页 | 注册页 |
 |:---:|:---:|
-| ![登录](screenshots/github/01-login.png) | ![注册](screenshots/github/02-register.png) |
+| ![登录](screenshot/login.png) | ![注册](screenshot/register.png) |
 
+### 首页与任务管理
 | 首页 Dashboard | 任务管理 |
 |:---:|:---:|
-| ![首页](screenshots/github/03-home.png) | ![任务](screenshots/github/04-tasks.png) |
+| ![首页](screenshot/home.png) | ![任务](screenshot/task.png) |
 
-| 专注计时 | 用户中心 |
+### 专注与提醒
+| 专注计时 | 提醒管理 |
 |:---:|:---:|
-| ![专注](screenshots/github/05-focus.png) | ![用户](screenshots/github/09-user.png) |
+| ![专注](screenshot/focus.png) | ![提醒](screenshot/reminder.png) |
 
-| 提醒管理 | 消息中心 |
+### 个人中心
+| 用户中心 |
+|:---:|
+| ![用户](screenshot/user.png) |
+
+### 社交功能
+| 好友 | 消息中心 |
 |:---:|:---:|
-| ![提醒](screenshots/github/06-reminders.png) | ![消息](screenshots/github/07-messages.png) |
+| ![好友](screenshot/friend.png) | ![消息](screenshot/message.png) |
+
+### 帮助与反馈
+| 帮助中心 | 反馈建议 |
+|:---:|:---:|
+| ![帮助](screenshot/help.png) | ![反馈](screenshot/feedback.png) |
 
 ## License
 

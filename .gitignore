@@ -47,3 +47,25 @@ fix_*.js
 # 数据库备份
 *.sql.gz
 backups/
+
+# 小程序（不上传）
+mini-program/
+
+# 无关文件和文件夹
+node20/
+node20.exe
+node20.zip
+deploy/
+self_schedule.sql
+新建文件夹/
+新技术知识/
+第一天/
+第二天/
+第三天/
+第五天/
+"新建 文本文档.txt"
+__backend.log
+__frontend.log
+后端API接口文档.md
+screenshots/
+*.txt
